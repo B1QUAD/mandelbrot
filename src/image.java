@@ -7,7 +7,7 @@ public class image {
 
 	private int width, height, alpha = 255;
 	private BufferedImage img;
-	private File f = null;
+	private File f;
 
 	image(int w, int h) {
 		width = w;
