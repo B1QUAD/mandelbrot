@@ -46,7 +46,7 @@ public class image {
 		//create buffered image object img
 		BufferedImage img = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
 		//file object
-		File f = null;
+		File f;
 		//create random image pixel by pixel
 		for (int y = 0; y < height; y++) {
 			for (int x = 0; x < width; x++) {
