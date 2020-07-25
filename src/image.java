@@ -1,4 +1,3 @@
-
 import java.io.File;
 import java.io.IOException;
 import java.awt.image.BufferedImage;
@@ -9,7 +8,7 @@ public class image {
 	private int width, height, alpha = 255;
 	private BufferedImage img;
 	private File f = null;
-	
+
 	image(int w, int h) {
 		width = w;
 		height = h;
@@ -30,7 +29,7 @@ public class image {
 		int p = (alpha << 24) | (r << 16) | (g << 8) | b; //pixel
 		img.setRGB(x, y, p);
 	}
-	
+
 	public void writeFile(String path) {
 		try {
 			f = new File(path);
@@ -39,7 +38,7 @@ public class image {
 			System.out.println("Error: " + e.toString());
 		}
 	}
-	
+
 	public static void main(String args[]) throws IOException {
 		//image dimension
 		int width = 1920;
@@ -56,7 +55,7 @@ public class image {
 //				int r = (int) (Math.random() * 256); //red
 //				int g = (int) (Math.random() * 256); //green
 //				int b = (int) (Math.random() * 256); //blue
-				int r = x * (int)Math.sin(y % (y + 1));
+				int r = x * (int) Math.sin(y % (y + 1));
 				int g = x % (y + 1);
 				int b = x + y;
 				int p = (a << 24) | (r << 16) | (g << 8) | b; //pixel

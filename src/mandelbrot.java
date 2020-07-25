@@ -1,4 +1,3 @@
-
 import java.util.Set;
 
 public class mandelbrot {
@@ -27,25 +26,4 @@ public class mandelbrot {
 		}
 		return maxIter;
 	}
-
-//	public static void main(String[] args) {
-//		image img = new image(resX, resY);
-//
-//		for (int y = 0; y < resY; y++) {
-//			for (int x = 0; x < resX; x++) {
-////				int it = mandelebrot(mapX(x), mapY(y));
-//				int it = 0;
-//				if (it == 0) {
-//					img.draw(0, 0, 0, x, y);
-//				} else if (it % 3 == 0) {
-//					img.draw(0, 0, 25, x, y);
-//				} else if (it % 2 == 0) {
-//					img.draw(128, 0, 128, x, y);
-//				} else if (it % 1 == 0) {
-//					img.draw(25, 0, 255, x, y);
-//				}
-//			}
-//			img.writeFile("mnd.png");
-//		}
-//	}
 }

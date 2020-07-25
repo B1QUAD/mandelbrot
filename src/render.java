@@ -1,4 +1,3 @@
-
 import java.util.concurrent.*;
 
 class test implements Runnable {
@@ -20,8 +19,7 @@ class test implements Runnable {
 		for (int y = yMin; y < yMax; y++) {
 			for (int x = xMin; x < xMax; x++) {
 				int it = mn.mandelbrot(mn.mapX(x), mn.mapY(y));
-
-//				System.out.println(it + " " + id);
+				
 				if (it == 0) {
 					render.img.draw(0, 0, 0, x, y);
 				} else if (it % 3 == 0) {
@@ -31,7 +29,6 @@ class test implements Runnable {
 				} else if (it % 1 == 0) {
 					render.img.draw(0, 128, 0, x, y);
 				}
-//				render.img.writeFile(id+"mnd.png");
 			}
 		}
 		System.out.println("thread " + id + " finished.");
@@ -49,7 +46,6 @@ public class render {
 		for (int i = 0; i < vDiv; i++) {
 			for (int j = 0; j < div; j++) {
 				excecutor.submit(new test(iter, (resX/div) * j, (resY/vDiv) * i, (resX/div) * (j + 1), (resY/vDiv) * (i + 1)));
-//				System.out.println(((resX / div) * j) + " " + ((resY / div) * i) + " " + ((resX / div) * (j + 1)) + " " + (resY / div) * (i + 1));
 				iter++;
 			}
 		}
