@@ -37,10 +37,10 @@ class test implements Runnable {
 
 public class render {
 
-	public static int resX = 3840, resY = 2160, div = 20, vDiv = 20;
+	public static int resX = 3840, resY = 2160, div = 40, vDiv = 40;
 	public static image img = new image(resX, resY);
 	public void man() {
-		ExecutorService excecutor = Executors.newFixedThreadPool(20);
+		ExecutorService excecutor = Executors.newFixedThreadPool(8);
 		
 		int iter = 0;
 		for (int i = 0; i < vDiv; i++) {
