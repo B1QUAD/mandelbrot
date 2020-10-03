@@ -1,5 +1,4 @@
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 
@@ -16,8 +15,8 @@ public class image {
 	}
 
 	image() {
-		width = 1440 * 2;
-		height = 900 * 2;
+		width = 3840;
+		height = 2160; // Should be changed to be object oriented.
 		img = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
 	}
 
